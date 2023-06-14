@@ -23,7 +23,6 @@ export default function SocialLinks() {
         </>
       ),
       href: "https://github.com/Chris41700",
-      style: "rounded-tr-md",
     },
     {
       id: 3,
