@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
 import SocialLinks from "./components/SocialLinks";
 
 export default function App() {
@@ -12,6 +14,8 @@ export default function App() {
       <Home />
       <About />
       <Portfolio />
+      <Experience />
+      <Contact />
       <SocialLinks />
     </div>
   );
