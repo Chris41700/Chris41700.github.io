@@ -45,7 +45,7 @@ export default function Home() {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-3xl max-w-full h-auto max-h-96 mx-auto my-8 sm:my-0"
+            className="rounded-3xl max-w-full h-auto max-h-96 mx-auto my-8 tablet:my-0"
           />
         </div>
       </div>
