@@ -9,18 +9,18 @@ export default function Home() {
       name="home"
       className="h-screen w-full bg-gradient-to-b from-green-200 to-teal-300"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white">
-            Hello, I am
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+            My name is
           </h2>
-          <h1 className="text-6xl sm:text-8xl font-bold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
             Christopher Hui
           </h1>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
             Aspiring Software Developer
           </h2>
-          <p className="text-gray-500 py-4 max-w-md">
+          <p className="text-gray-500 py-4 max-w-md text-sm sm:text-base md:text-lg">
             I have 8 years of experience building and designing software.
             Currently, I love to work on web applications using technologies
             like React, Tailwind, Next.js, and GraphQL.
@@ -41,11 +41,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        <div className="flex justify-center">
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-3xl max-w-xl mx-auto w-2/3 md:w-full"
+            className="rounded-3xl max-w-full h-auto max-h-96 mx-auto my-8 sm:my-0"
           />
         </div>
       </div>
