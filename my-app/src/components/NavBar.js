@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 export default function NavBar() {
-  const [nav, setNav] = useState();
+  const [nav, setNav] = useState(false);
 
   const links = [
     {

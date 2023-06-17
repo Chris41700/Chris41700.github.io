@@ -4,7 +4,8 @@ export default function About() {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+      className="w-full h-screen bg-gradient-to-b from-teal-300 to-green-200
+      text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -12,32 +13,25 @@ export default function About() {
             About
           </p>
         </div>
+
         <p className="text-xl mt-20">
-          From my early fascination with video games and Nintendo, my journey
-          led me to a deep appreciation for computer science. The joy and
-          challenge of gaming naturally translated into a love for coding and
-          problem-solving. As I pursued my computer science education, I found
-          myself thoroughly enjoying my classes, diving into complex algorithms,
-          and discovering the beauty of logical thinking. It was during this
-          time that I decided to further enhance my skills by joining the Tech
-          Talent Pipeline Full-Stack Development Program.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
+          deserunt illum mollitia officiis qui exercitationem perferendis neque
+          quasi a recusandae necessitatibus tempora iusto! Blanditiis error
+          iste, totam fugiat recusandae rerum laborum perferendis molestiae
+          aperiam asperiores nemo. Magni dolor maxime debitis vitae, eaque hic
+          ab mollitia voluptatibus, a nostrum eveniet laborum!
         </p>
 
         <br />
 
         <p className="text-xl">
-          In the program, I immersed myself in a wide range of technologies,
-          including JavaScript, React.js, Express.js, Node.js, and PostgreSQL.
-          With each new skill I acquired, my excitement grew. I was eager to
-          apply my knowledge in a practical setting, and the opportunity arose
-          when I landed my first internship at StartingPoint. As a software
-          development intern, I collaborated closely with the talented
-          development team, working on the company's website. I was thrilled to
-          engage in both frontend and backend work, utilizing my expertise to
-          improve the website's functionality and user experience. This
-          internship not only solidified my passion for coding but also provided
-          me with invaluable real-world experience that further fueled my desire
-          to pursue a career in software development.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+          pariatur, vel similique sint, nobis aspernatur ut praesentium
+          explicabo ipsam aliquid quasi laboriosam et culpa possimus repudiandae
+          quisquam ullam maiores ab unde. Fugiat odio mollitia nemo alias.
+          Commodi facilis atque nulla vero voluptatem explicabo. Quibusdam,
+          magni quo! Eum cupiditate debitis labore.
         </p>
       </div>
     </div>

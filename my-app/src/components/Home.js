@@ -1,25 +1,29 @@
 import React from "react";
 import HeroImage from "../assets/heroImage.JPEG";
-import { MdOutlineArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
 export default function Home() {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
+      className="h-screen w-full bg-gradient-to-b from-green-200 to-teal-300"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            My name is Christopher Hui
+          <h2 className="text-4xl sm:text-5xl font-bold text-white">
+            Hello, I am
+          </h2>
+          <h1 className="text-6xl sm:text-8xl font-bold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+            Christopher Hui
+          </h1>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white">
+            Aspiring Software Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            I have recently graduated with my Bachelor's degree in Computer
-            Science with a minor in Mathematics. As an aspiring software
-            developer, I'm seeking entry-level oppportunities. Currently, I love
-            to work on web application using technologies like JavaScript,
-            React, Node, Tailwind, MySQL, and Java.
+            I have 8 years of experience building and designing software.
+            Currently, I love to work on web applications using technologies
+            like React, Tailwind, Next.js, and GraphQL.
           </p>
 
           <div>
@@ -31,7 +35,7 @@ export default function Home() {
             >
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
-                <MdOutlineArrowRight size={25} className="ml-1" />
+                <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
               </span>
             </Link>
           </div>
@@ -41,7 +45,7 @@ export default function Home() {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-2xl max-w-xl mx-auto w-2/3 md:w-full"
+            className="rounded-3xl max-w-xl mx-auto w-2/3 md:w-full"
           />
         </div>
       </div>
