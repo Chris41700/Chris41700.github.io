@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.02ce9a2d.css",
-    "main.js": "/static/js/main.d1e2c2a1.js",
+    "main.css": "/static/css/main.ebf92c9a.css",
+    "main.js": "/static/js/main.25ba3ddd.js",
     "static/media/heroImage.JPEG": "/static/media/heroImage.54ff3916b6e2c8b3c761.JPEG",
     "static/media/capstone_project.png": "/static/media/capstone_project.9b74f417457957f93388.png",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
@@ -11,11 +11,11 @@
     "static/media/css.png": "/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/javafx_studymate.png": "/static/media/javafx_studymate.304296d77c4d2a7986a4.png",
     "index.html": "/index.html",
-    "main.02ce9a2d.css.map": "/static/css/main.02ce9a2d.css.map",
-    "main.d1e2c2a1.js.map": "/static/js/main.d1e2c2a1.js.map"
+    "main.ebf92c9a.css.map": "/static/css/main.ebf92c9a.css.map",
+    "main.25ba3ddd.js.map": "/static/js/main.25ba3ddd.js.map"
   },
   "entrypoints": [
-    "static/css/main.02ce9a2d.css",
-    "static/js/main.d1e2c2a1.js"
+    "static/css/main.ebf92c9a.css",
+    "static/js/main.25ba3ddd.js"
   ]
 }
