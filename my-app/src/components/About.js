@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-gradient-to-b from-teal-300 to-green-200
+      className="w-full h-fit bg-gradient-to-b from-teal-300 to-green-200
       text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
