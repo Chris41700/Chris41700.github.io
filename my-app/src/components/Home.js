@@ -11,14 +11,14 @@ export default function Home() {
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            My name is
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            Hi! I'm
           </h2>
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
             Christopher Hui
           </h1>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            Aspiring Software Developer
+            Software Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md text-sm sm:text-base md:text-lg">
             I have 8 years of experience building and designing software.
@@ -45,7 +45,7 @@ export default function Home() {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-3xl max-w-full h-auto max-h-96 mx-auto my-8 tablet:my-0"
+            className="rounded-3xl md:rounded-none lg:rounded-3xl max-w-full h-auto max-h-96 mx-auto my-8 tablet:my-0 lg:p-8"
           />
         </div>
       </div>
