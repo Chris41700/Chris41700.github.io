@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-gradient-to-b from-green-200 to-teal-300 p-4 text-white pt-36 sm:pt-64 md:pt-0"
+      className="w-full h-screen bg-gradient-to-b from-green-200 to-teal-300 p-4 text-white pt-32 sm:pt-48 md:pt-0"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">

@@ -12,12 +12,28 @@ export default function Portfolio() {
       id: 2,
       src: javafxStudyMate,
     },
+    {
+      id: 3,
+      src: capstoneProject,
+    },
+    {
+      id: 4,
+      src: javafxStudyMate,
+    },
+    {
+      id: 5,
+      src: capstoneProject,
+    },
+    {
+      id: 6,
+      src: javafxStudyMate,
+    },
   ];
 
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-green-200 to-teal-300 w-full text-white md:h-screen pt-36 sm:pt-64 md:pt-0"
+      className="bg-gradient-to-b from-green-200 to-teal-300 w-full text-white md:h-screen pt-96 sm:pt-44 md:pt-0"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">

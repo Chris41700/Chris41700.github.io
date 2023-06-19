@@ -40,7 +40,7 @@ export default function NavBar() {
             key={id}
             className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200"
           >
-            <Link to={link} smooth duration={500}>
+            <Link to={link} smooth duration={500} offset={-20}>
               {link}
             </Link>
           </li>
@@ -66,6 +66,7 @@ export default function NavBar() {
                 to={link}
                 smooth
                 duration={500}
+                offset={-80}
               >
                 {link}
               </Link>
