@@ -7,14 +7,12 @@ export default function Home() {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-green-200 to-teal-300"
+      className="h-screen w-full bg-gradient-to-b from-green-200 to-teal-300 pt-20 md:pt-0"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Hi! I'm
-          </h2>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold text-white">Hi! I'm</h2>
+          <h1 className="text-4xl md:text-6xl font-bold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
             Christopher Hui
           </h1>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
@@ -45,7 +43,7 @@ export default function Home() {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-3xl md:rounded-none lg:rounded-3xl max-w-full h-auto max-h-96 mx-auto my-8 tablet:my-0 lg:p-8"
+            className="rounded-3xl max-w-xs md:max-w-xl h-auto mx-auto p-8"
           />
         </div>
       </div>
