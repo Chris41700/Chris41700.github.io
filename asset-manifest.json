@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.96ec7475.css",
-    "main.js": "/static/js/main.e6ad94ed.js",
+    "main.css": "/static/css/main.25925220.css",
+    "main.js": "/static/js/main.b9c8007d.js",
     "static/media/heroImage.JPEG": "/static/media/heroImage.54ff3916b6e2c8b3c761.JPEG",
     "static/media/capstone_project.png": "/static/media/capstone_project.9b74f417457957f93388.png",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/node.png": "/static/media/node.952a9ea986dcfa5229ad.png",
+    "static/media/github.png": "/static/media/github.3b9e32903aa89111875d.png",
     "static/media/html.png": "/static/media/html.2ba4fabc69a89a8f71e6.png",
     "static/media/tailwind.png": "/static/media/tailwind.e47ac876b8d4d0bba47a.png",
     "static/media/css.png": "/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/javascript.png": "/static/media/javascript.4f0b49106446a4aa6cf7.png",
     "static/media/javafx_studymate.png": "/static/media/javafx_studymate.304296d77c4d2a7986a4.png",
     "index.html": "/index.html",
-    "main.96ec7475.css.map": "/static/css/main.96ec7475.css.map",
-    "main.e6ad94ed.js.map": "/static/js/main.e6ad94ed.js.map"
+    "main.25925220.css.map": "/static/css/main.25925220.css.map",
+    "main.b9c8007d.js.map": "/static/js/main.b9c8007d.js.map"
   },
   "entrypoints": [
-    "static/css/main.96ec7475.css",
-    "static/js/main.e6ad94ed.js"
+    "static/css/main.25925220.css",
+    "static/js/main.b9c8007d.js"
   ]
 }
