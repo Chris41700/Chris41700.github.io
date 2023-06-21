@@ -14,23 +14,18 @@ export default function About() {
         </div>
 
         <p className="text-xl mt-20">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-          deserunt illum mollitia officiis qui exercitationem perferendis neque
-          quasi a recusandae necessitatibus tempora iusto! Blanditiis error
-          iste, totam fugiat recusandae rerum laborum perferendis molestiae
-          aperiam asperiores nemo. Magni dolor maxime debitis vitae, eaque hic
-          ab mollitia voluptatibus, a nostrum eveniet laborum!
-        </p>
-
-        <br />
-
-        <p className="text-xl">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
-          pariatur, vel similique sint, nobis aspernatur ut praesentium
-          explicabo ipsam aliquid quasi laboriosam et culpa possimus repudiandae
-          quisquam ullam maiores ab unde. Fugiat odio mollitia nemo alias.
-          Commodi facilis atque nulla vero voluptatem explicabo. Quibusdam,
-          magni quo! Eum cupiditate debitis labore.
+          I am a driven Software Developer based in Staten Island, NY. I
+          specialize in languages like C++, Java, and JavaScript, and I have a
+          strong proficiency in frameworks such as React.js and Tailwind CSS. My
+          experience includes working with databases like PostgreSQL and MySQL,
+          allowing me to develop robust and scalable applications. With tools
+          like GitHub, Trello, and Postman, I streamline development processes
+          and facilitate effective collaboration within agile teams. I hold a
+          Bachelor's degree in Computer Science with a minor in Mathematics from
+          the City University of New York, College of Staten Island, where I
+          achieved a Cum Laude distinction and was consistently recognized on
+          the Dean's List. I am eager to apply my skills and passion to
+          contribute to impactful software development projects.
         </p>
       </div>
     </div>

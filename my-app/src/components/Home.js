@@ -18,9 +18,8 @@ export default function Home() {
             Software Developer
           </h2>
           <p className="text-white py-4 max-w-md">
-            I have 8 years of experience building and desgining software.
-            Currently, I love to work on web application using technologies like
-            React, Tailwind, Next JS and GraphQL.
+            Recent computer science undergraduate specializing in full stack
+            development with proficency with Java, C++, React, Tailwind, etc.
           </p>
 
           <div>
@@ -41,7 +40,7 @@ export default function Home() {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-3xl mx-auto w-3/5 sm:w-2/3 md:w-7/12 border-8 border-separate space-y-10"
+            className="rounded-3xl mx-auto w-3/5 sm:w-2/3 md:w-8/12 border-4 border-solid"
           />
         </div>
       </div>
