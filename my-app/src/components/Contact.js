@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-gradient-to-b from-green-200 to-teal-300 p-4 text-white pt-32 sm:pt-48 md:pt-0"
+      className="w-full h-fit sm:h-screen bg-gradient-to-b from-green-400 to-teal-500 p-4 text-white"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
@@ -14,11 +14,11 @@ export default function Contact() {
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className=" flex justify-center items-center">
           <form
             action="https://getform.io/f/b22ec582-d9eb-4038-86d5-bb4bcd830a55"
             method="POST"
-            className="flex flex-col w-full md:w-1/2"
+            className=" flex flex-col w-full md:w-1/2"
           >
             <input
               type="text"

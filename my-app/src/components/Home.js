@@ -7,23 +7,20 @@ export default function Home() {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-green-200 to-teal-300 pt-36 sm:pt-64 md:pt-0"
+      className="w-full h-fit sm:h-screen bg-gradient-to-b from-green-400 to-teal-500"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 md:flex-row">
-        <div className="flex flex-col justify-center h-full md:pr-8 mt-16 sm:mt-0">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Hi! I'm
-          </h2>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 pt-36 md:flex-row">
+        <div className="flex flex-col justify-center h-full">
+          <h2 className="text-4xl sm:text-6xl font-bold bg-gradient-to-b from-cyan-500 to-blue-500 text-transparent inline-block bg-clip-text">
             Christopher Hui
-          </h1>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4">
+          </h2>
+          <h2 className="text-4xl sm:text-6xl font-bold text-white">
             Software Developer
           </h2>
-          <p className="text-gray-500 py-4 max-w-md text-base sm:text-lg md:text-xl">
-            I have 8 years of experience building and designing software.
-            Currently, I love to work on web applications using technologies
-            like React, Tailwind, Next.js, and GraphQL.
+          <p className="text-white py-4 max-w-md">
+            I have 8 years of experience building and desgining software.
+            Currently, I love to work on web application using technologies like
+            React, Tailwind, Next JS and GraphQL.
           </p>
 
           <div>
@@ -31,22 +28,20 @@ export default function Home() {
               to="portfolio"
               smooth
               duration={500}
-              offset={-200} // Adjust this value to properly position the content
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer transition-transform hover:scale-105"
+              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
             >
               Portfolio
-              <span className="ml-1">
-                <MdOutlineKeyboardArrowRight size={25} />
+              <span className="group-hover:rotate-90 duration-300">
+                <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
               </span>
             </Link>
           </div>
         </div>
-
-        <div className="flex justify-center mt-6 sm:mt-10">
+        <div>
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-full max-w-xs sm:max-w-sm md:max-w-md h-auto mx-auto shadow-xl border-white border-8"
+            className="rounded-3xl mx-auto w-3/5 sm:w-2/3 md:w-7/12 border-8 border-separate space-y-10"
           />
         </div>
       </div>

@@ -33,7 +33,7 @@ export default function Portfolio() {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-green-200 to-teal-300 w-full text-white md:h-screen pt-96 sm:pt-44 md:pt-0"
+      className="bg-gradient-to-b from-green-400 to-teal-500 w-full text-white h-fit sm:h-screen"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -45,20 +45,17 @@ export default function Portfolio() {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map(({ id, src }) => (
-            <div
-              key={id}
-              className="shadow-md shadow-gray-600 rounded-lg bg-slate-300"
-            >
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
                 alt=""
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 bg-blue-500 text-white">
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Demo
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 bg-green-500 text-white">
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Code
                 </button>
               </div>
