@@ -6,6 +6,8 @@ import react from "../assets/icons/react.png";
 import tailwind from "../assets/icons/tailwind.png";
 import node from "../assets/icons/node.png";
 import java from "../assets/icons/java.png";
+import cplusplus from "../assets/icons/c++.png";
+import csharp from "../assets/icons/c#.png";
 
 export default function Experience() {
   const techs = [
@@ -50,6 +52,18 @@ export default function Experience() {
       src: java,
       title: "Java",
       style: "bg-gradient-to-b from-blue-100 to-orange-500 shadow-orange-500",
+    },
+    {
+      id: 8,
+      src: cplusplus,
+      title: "C++",
+      style: "bg-gradient-to-b from-blue-100 to-blue-800 shadow-blue-500",
+    },
+    {
+      id: 9,
+      src: csharp,
+      title: "C#",
+      style: "bg-gradient-to-b from-purple-100 to-purple-800 shadow-purple-500",
     },
   ];
 
