@@ -10,14 +10,14 @@ export default function Home() {
       className="w-full h-fit sm:h-screen bg-gradient-to-b from-green-400 to-teal-500"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 pt-36 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
+        <div className="flex flex-col justify-center h-full md:mr-10">
           <h2 className="text-4xl sm:text-6xl font-bold bg-gradient-to-b from-cyan-500 to-blue-500 text-transparent inline-block bg-clip-text">
             Christopher Hui
           </h2>
-          <h2 className="text-4xl sm:text-6xl font-bold text-white">
+          <h2 className="text-4xl sm:text-6xl font-bold text-white whitespace-nowrap">
             Software Developer
           </h2>
-          <p className="text-white py-4 max-w-md">
+          <p className="text-white py-4 max-w-md whitesapce-nowrap">
             Recent computer science undergraduate specializing in full stack
             development with proficency with Java, C++, React, Tailwind, etc.
           </p>
@@ -40,7 +40,7 @@ export default function Home() {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-3xl mx-auto w-3/5 sm:w-2/3 md:w-8/12 border-4 border-solid"
+            className="rounded-3xl mx-auto w-3/5 sm:w-2/3 md:w-full border-4 border-solid"
           />
         </div>
       </div>
