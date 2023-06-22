@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div
       name="home"
-      className="w-full h-fit sm:h-screen bg-gradient-to-b from-green-400 to-teal-500 pt-40 sm:pt-32 md:pt-44 lg:pt-0"
+      className="w-full h-fit sm:h-screen bg-gradient-to-b from-green-400 to-teal-500 pt-40 sm:pt-48 md:pt-64 lg:pt-0"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 lg:flex-row">
         <div className="flex flex-col justify-center h-full md:mr-10">
