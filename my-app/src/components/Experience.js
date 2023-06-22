@@ -188,7 +188,10 @@ export default function Experience() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-teal-500 to-green-400 w-full h-fit sm:min-h-screen">
+    <div
+      name="experience"
+      className="bg-gradient-to-b from-teal-500 to-green-400 w-full h-fit sm:min-h-screen sm:pt-60"
+    >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
@@ -197,7 +200,7 @@ export default function Experience() {
           <p className="py-6">These are the technologies I've worked with</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+        <div className="w-full grid sm:grid-cols-3 lg:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
           {techs.map(({ id, src, title, style }) => (
             <div
               key={id}
