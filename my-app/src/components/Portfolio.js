@@ -1,6 +1,7 @@
 import React from "react";
 import capstoneProject from "../assets/portfolio/capstone_project.png";
 import javafxStudyMate from "../assets/portfolio/javafx_studymate.png";
+import miniVi from "../assets/portfolio/miniVi.png";
 
 export default function Portfolio() {
   const portfolios = [
@@ -14,19 +15,7 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      src: capstoneProject,
-    },
-    {
-      id: 4,
-      src: javafxStudyMate,
-    },
-    {
-      id: 5,
-      src: capstoneProject,
-    },
-    {
-      id: 6,
-      src: javafxStudyMate,
+      src: miniVi,
     },
   ];
 
