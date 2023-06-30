@@ -1,24 +1,56 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Contact() {
+  const [refContent, inViewContent] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  const dropInVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2,
+      },
+    },
+  };
+
   return (
     <div
       name="contact"
       className="w-full h-fit sm:h-screen bg-gradient-to-b from-green-400 to-teal-500 p-4 text-white"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+        <motion.div
+          className="pb-8"
+          ref={refContent}
+          initial={inViewContent ? "visible" : "hidden"}
+          animate={inViewContent ? "visible" : "hidden"}
+          variants={dropInVariants}
+        >
+          <motion.p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
-          </p>
-          <p className="py-6">Submit the form below to get in touch with me</p>
-        </div>
+          </motion.p>
+          <motion.p className="py-6">
+            Submit the form below to get in touch with me
+          </motion.p>
+        </motion.div>
 
-        <div className=" flex justify-center items-center">
+        <motion.div
+          className="flex justify-center items-center"
+          initial={{ opacity: 0, y: -50 }}
+          animate={inViewContent ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           <form
             action="https://getform.io/f/b22ec582-d9eb-4038-86d5-bb4bcd830a55"
             method="POST"
-            className=" flex flex-col w-full md:w-1/2"
+            className="flex flex-col w-full md:w-1/2"
           >
             <input
               type="text"
@@ -43,7 +75,7 @@ export default function Contact() {
               Let's talk
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
