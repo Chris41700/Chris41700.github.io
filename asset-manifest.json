@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1df0a6ae.css",
-    "main.js": "/static/js/main.358e4a8b.js",
+    "main.css": "/static/css/main.49049005.css",
+    "main.js": "/static/js/main.0a2b7420.js",
     "static/media/heroImage.JPEG": "/static/media/heroImage.54ff3916b6e2c8b3c761.JPEG",
     "static/media/capstone_project.png": "/static/media/capstone_project.9b74f417457957f93388.png",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
@@ -12,12 +12,13 @@
     "static/media/css.png": "/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/javascript.png": "/static/media/javascript.4f0b49106446a4aa6cf7.png",
     "static/media/javafx_studymate.png": "/static/media/javafx_studymate.304296d77c4d2a7986a4.png",
+    "static/media/miniVi.png": "/static/media/miniVi.ef1cf9e9c6a82d0c33d9.png",
     "index.html": "/index.html",
-    "main.1df0a6ae.css.map": "/static/css/main.1df0a6ae.css.map",
-    "main.358e4a8b.js.map": "/static/js/main.358e4a8b.js.map"
+    "main.49049005.css.map": "/static/css/main.49049005.css.map",
+    "main.0a2b7420.js.map": "/static/js/main.0a2b7420.js.map"
   },
   "entrypoints": [
-    "static/css/main.1df0a6ae.css",
-    "static/js/main.358e4a8b.js"
+    "static/css/main.49049005.css",
+    "static/js/main.0a2b7420.js"
   ]
 }
