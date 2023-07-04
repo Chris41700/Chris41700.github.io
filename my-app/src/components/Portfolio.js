@@ -19,6 +19,18 @@ export default function Portfolio() {
       id: 3,
       src: miniVi,
     },
+    {
+      id: 4,
+      src: capstoneProject,
+    },
+    {
+      id: 5,
+      src: javafxStudyMate,
+    },
+    {
+      id: 6,
+      src: miniVi,
+    },
   ];
 
   const [refContent, inViewContent] = useInView({

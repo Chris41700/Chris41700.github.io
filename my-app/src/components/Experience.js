@@ -189,6 +189,11 @@ export default function Experience() {
     },
   ];
 
+  const [refContent, inViewContent] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   const dropInVariants = {
     hidden: { opacity: 0, y: -50 },
     visible: {
@@ -201,21 +206,28 @@ export default function Experience() {
     },
   };
 
-  const gridOptions = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+  const gridVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.15,
+      },
+    },
   };
 
-  const [containerRef, containerInView] = useInView({ triggerOnce: true });
-  const containerControls = useAnimation();
+  const [gridRef, inViewGrid] = useInView();
+  const gridControls = useAnimation();
 
   useEffect(() => {
-    if (containerInView) {
-      containerControls.start("visible");
+    if (inViewGrid) {
+      gridControls.start("visible");
     } else {
-      containerControls.start("hidden");
+      gridControls.start("hidden");
     }
-  }, [containerInView, containerControls]);
+  }, [inViewGrid, gridControls]);
 
   return (
     <div
@@ -224,10 +236,10 @@ export default function Experience() {
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <motion.div
-          ref={containerRef}
+          ref={refContent}
+          initial={inViewContent ? "visible" : "hidden"}
+          animate={inViewContent ? "visible" : "hidden"}
           variants={dropInVariants}
-          initial="hidden"
-          animate={containerControls}
         >
           <motion.p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
@@ -239,26 +251,19 @@ export default function Experience() {
 
         <motion.div
           className="w-full grid sm:grid-cols-3 lg:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0"
-          variants={gridOptions}
+          ref={gridRef}
           initial="hidden"
-          animate={containerControls}
+          animate={gridControls}
+          variants={gridVariants}
         >
           {techs.map(({ id, src, title, style }, index) => (
             <motion.div
               key={id}
               className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-              variants={gridOptions}
-              custom={index}
+              variants={dropInVariants}
             >
-              <motion.img
-                src={src}
-                alt=""
-                className="w-20 mx-auto"
-                variants={dropInVariants}
-              />
-              <motion.p className="mt-4 text-white" variants={dropInVariants}>
-                {title}
-              </motion.p>
+              <img src={src} alt={title} className="w-20 mx-auto" />
+              <motion.p className="mt-4 text-white">{title}</motion.p>
             </motion.div>
           ))}
         </motion.div>
