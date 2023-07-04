@@ -29,7 +29,7 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed z-50">
       <div>
         <h1 className="text-5xl font-signature ml-2">Chris</h1>
       </div>
@@ -55,7 +55,7 @@ export default function NavBar() {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-fit sm:h-screen bg-gradient-to-b from-black to-gray-800 text-white">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-fit sm:h-screen bg-gradient-to-b from-black to-gray-800 text-white z-50">
           {links.map(({ id, link }) => (
             <li
               key={id}

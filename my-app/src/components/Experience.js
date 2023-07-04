@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import bootstrap from "../assets/icons/bootstrap.png";
@@ -189,24 +189,33 @@ export default function Experience() {
     },
   ];
 
-  const dropInOptions = {
+  const dropInVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2,
+      },
+    },
   };
 
-  const [titleRef, titleInView] = useInView({ triggerOnce: false });
-  const [descriptionRef, descriptionInView] = useInView({ triggerOnce: false });
+  const gridOptions = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+  };
 
-  const titleControls = useAnimation();
-  const descriptionControls = useAnimation();
+  const [containerRef, containerInView] = useInView({ triggerOnce: true });
+  const containerControls = useAnimation();
 
-  if (titleInView) {
-    titleControls.start("visible");
-  }
-
-  if (descriptionInView) {
-    descriptionControls.start("visible");
-  }
+  useEffect(() => {
+    if (containerInView) {
+      containerControls.start("visible");
+    } else {
+      containerControls.start("hidden");
+    }
+  }, [containerInView, containerControls]);
 
   return (
     <div
@@ -214,49 +223,42 @@ export default function Experience() {
       className="bg-gradient-to-b from-teal-500 to-green-400 w-full h-fit sm:min-h-screen sm:pt-60"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-        <div>
-          <motion.p
-            className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline"
-            variants={dropInOptions}
-            initial="hidden"
-            animate={titleControls}
-            ref={titleRef}
-          >
+        <motion.div
+          ref={containerRef}
+          variants={dropInVariants}
+          initial="hidden"
+          animate={containerControls}
+        >
+          <motion.p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
           </motion.p>
-          <motion.p
-            className="py-6"
-            variants={dropInOptions}
-            initial="hidden"
-            animate={descriptionControls}
-            ref={descriptionRef}
-          >
+          <motion.p className="py-6">
             These are the technologies I've worked with
           </motion.p>
-        </div>
+        </motion.div>
 
         <motion.div
           className="w-full grid sm:grid-cols-3 lg:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.2,
-              },
-            },
-          }}
+          variants={gridOptions}
           initial="hidden"
-          animate="visible"
+          animate={containerControls}
         >
-          {techs.map(({ id, src, title, style }) => (
+          {techs.map(({ id, src, title, style }, index) => (
             <motion.div
               key={id}
               className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-              variants={dropInOptions}
+              variants={gridOptions}
+              custom={index}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
-              <p className="mt-4 text-white">{title}</p>
+              <motion.img
+                src={src}
+                alt=""
+                className="w-20 mx-auto"
+                variants={dropInVariants}
+              />
+              <motion.p className="mt-4 text-white" variants={dropInVariants}>
+                {title}
+              </motion.p>
             </motion.div>
           ))}
         </motion.div>

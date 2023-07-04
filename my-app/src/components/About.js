@@ -3,13 +3,30 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function About() {
+  const [refTitle, inViewTitle] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   const [refContent, inViewContent] = useInView({
     triggerOnce: false,
     threshold: 0.1,
   });
 
-  const dropInVariants = {
+  const dropDownVariants = {
     hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2,
+      },
+    },
+  };
+
+  const dropUpVariants = {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -28,10 +45,10 @@ export default function About() {
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <motion.div
           className="pb-8"
-          ref={refContent}
+          ref={refTitle}
           initial="hidden"
-          animate={inViewContent ? "visible" : "hidden"}
-          variants={dropInVariants}
+          animate={inViewTitle ? "visible" : "hidden"}
+          variants={dropDownVariants}
         >
           <motion.p className="text-4xl font-bold inline border-b-4 border-gray-500">
             About
@@ -43,7 +60,7 @@ export default function About() {
           ref={refContent}
           initial="hidden"
           animate={inViewContent ? "visible" : "hidden"}
-          variants={dropInVariants}
+          variants={dropUpVariants}
         >
           I am a driven Software Developer based in Staten Island, NY. I
           specialize in languages like C++, Java, and JavaScript, and I have a

@@ -1,11 +1,26 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import capstoneProject from "../assets/portfolio/capstone_project.png";
 import javafxStudyMate from "../assets/portfolio/javafx_studymate.png";
 import miniVi from "../assets/portfolio/miniVi.png";
 
 export default function Portfolio() {
+  const portfolios = [
+    {
+      id: 1,
+      src: capstoneProject,
+    },
+    {
+      id: 2,
+      src: javafxStudyMate,
+    },
+    {
+      id: 3,
+      src: miniVi,
+    },
+  ];
+
   const [refContent, inViewContent] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -23,20 +38,28 @@ export default function Portfolio() {
     },
   };
 
-  const portfolios = [
-    {
-      id: 1,
-      src: capstoneProject,
+  const portfolioVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+      },
     },
-    {
-      id: 2,
-      src: javafxStudyMate,
-    },
-    {
-      id: 3,
-      src: miniVi,
-    },
-  ];
+  };
+
+  const [gridRef, inViewGrid] = useInView();
+
+  const gridControls = useAnimation();
+
+  useEffect(() => {
+    if (inViewGrid) {
+      gridControls.start("visible");
+    } else {
+      gridControls.start("hidden");
+    }
+  }, [inViewGrid, gridControls]);
 
   return (
     <div
@@ -59,16 +82,17 @@ export default function Portfolio() {
           </motion.p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <motion.div
+          className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
+          ref={gridRef}
+          initial="hidden"
+          animate={gridControls}
+        >
           {portfolios.map(({ id, src }) => (
             <motion.div
               key={id}
               className="shadow-md shadow-gray-600 rounded-lg"
-              initial={{ opacity: 0, y: -20 }}
-              animate={
-                inViewContent ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-              }
-              transition={{ duration: 0.5, delay: 0.4 }}
+              variants={portfolioVariants}
             >
               <img
                 src={src}
@@ -85,7 +109,7 @@ export default function Portfolio() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
