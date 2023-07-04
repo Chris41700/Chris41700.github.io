@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import capstoneProject from "../assets/portfolio/capstone_project.png";
@@ -62,7 +62,6 @@ export default function Portfolio() {
   };
 
   const [gridRef, inViewGrid] = useInView();
-
   const gridControls = useAnimation();
 
   useEffect(() => {
@@ -72,6 +71,31 @@ export default function Portfolio() {
       gridControls.start("hidden");
     }
   }, [inViewGrid, gridControls]);
+
+  const [shuffledPortfolios, setShuffledPortfolios] = useState(portfolios);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const shuffleGrid = () => {
+    const shuffledArray = shuffledPortfolios.slice();
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    setShuffledPortfolios(shuffledArray);
+  };
 
   return (
     <div
@@ -94,13 +118,27 @@ export default function Portfolio() {
           </motion.p>
         </motion.div>
 
+        {isMobile && (
+          <div className="flex justify-center">
+            <motion.button
+              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer mb-4"
+              onClick={shuffleGrid}
+              initial={inViewContent ? "visible" : "hidden"}
+              animate={inViewContent ? "visible" : "hidden"}
+              variants={dropInVariants}
+            >
+              Shuffle
+            </motion.button>
+          </div>
+        )}
+
         <motion.div
           className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
           ref={gridRef}
           initial="hidden"
           animate={gridControls}
         >
-          {portfolios.map(({ id, src }) => (
+          {shuffledPortfolios.map(({ id, src }) => (
             <motion.div
               key={id}
               className="shadow-md shadow-gray-600 rounded-lg"

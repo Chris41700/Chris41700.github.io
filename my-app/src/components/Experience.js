@@ -206,18 +206,6 @@ export default function Experience() {
     },
   };
 
-  const gridVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
   const [gridRef, inViewGrid] = useInView();
   const gridControls = useAnimation();
 
@@ -228,6 +216,26 @@ export default function Experience() {
       gridControls.start("hidden");
     }
   }, [inViewGrid, gridControls]);
+
+  const staggerContainerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const staggerItemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
     <div
@@ -250,17 +258,17 @@ export default function Experience() {
         </motion.div>
 
         <motion.div
-          className="w-full grid sm:grid-cols-3 lg:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0"
+          className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0"
           ref={gridRef}
           initial="hidden"
           animate={gridControls}
-          variants={gridVariants}
+          variants={staggerContainerVariants}
         >
-          {techs.map(({ id, src, title, style }, index) => (
+          {techs.map(({ id, src, title, style }) => (
             <motion.div
               key={id}
               className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-              variants={dropInVariants}
+              variants={staggerItemVariants}
             >
               <img src={src} alt={title} className="w-20 mx-auto" />
               <motion.p className="mt-4 text-white">{title}</motion.p>
