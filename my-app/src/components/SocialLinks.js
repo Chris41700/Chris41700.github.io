@@ -11,7 +11,8 @@ export default function SocialLinks() {
       id: 1,
       child: (
         <>
-          Linkedin <FaLinkedin size={30} />
+          <FaLinkedin size={30} />
+          <span className="ml-2">Linkedin</span>
         </>
       ),
       href: "https://linkedin.com/in/Chris41700",
@@ -21,7 +22,8 @@ export default function SocialLinks() {
       id: 2,
       child: (
         <>
-          GitHub <FaGithub size={30} />
+          <FaGithub size={30} />
+          <span className="ml-2">GitHub</span>
         </>
       ),
       href: "https://github.com/Chris41700",
@@ -30,7 +32,8 @@ export default function SocialLinks() {
       id: 3,
       child: (
         <>
-          Mail <HiOutlineMail size={30} />
+          <HiOutlineMail size={30} />
+          <span className="ml-2">Mail</span>
         </>
       ),
       href: "mailto:ChrisHui417@gmail.com",
@@ -39,7 +42,8 @@ export default function SocialLinks() {
       id: 4,
       child: (
         <>
-          Resume <BsFillPersonLinesFill size={30} />
+          <BsFillPersonLinesFill size={30} />
+          <span className="ml-2">Resume</span>
         </>
       ),
       href: "/Christopher_Hui_Resume.pdf",
@@ -74,7 +78,7 @@ export default function SocialLinks() {
             >
               <a
                 href={href}
-                className="flex items-center text-white"
+                className="flex items-center justify-end text-white"
                 download={download}
                 target="_blank"
                 rel="noreferrer"
