@@ -43,18 +43,18 @@ export default function Home() {
   return (
     <div
       name="home"
-      className="w-full h-fit sm:h-screen bg-gradient-to-b from-green-400 to-teal-500 pt-40 sm:pt-48 md:pt-72 lg:pt-0"
+      className="w-full h-fit sm:h-screen bg-gradient-to-b from-green-400 to-teal-500"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 lg:flex-row">
         <motion.div
-          className="flex flex-col justify-center h-full md:mr-10"
+          className="flex flex-col justify-center lg:mr-10"
           ref={refContent}
           initial={inViewContent ? "visible" : "hidden"}
           animate={inViewContent ? "visible" : "hidden"}
           variants={dropInVariants}
           exit="hidden"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-b from-cyan-500 to-blue-500 text-transparent inline-block bg-clip-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-b from-cyan-500 to-blue-500 text-transparent inline-block bg-clip-text mt-40 sm:mt-72 md:mt-96 lg:mt-0">
             <span className="whitespace-nowrap">Christopher Hui</span> <br />
             <span className="whitespace-nowrap text-white">
               Software Developer
